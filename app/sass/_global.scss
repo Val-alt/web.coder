@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    outline: none;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    max-height: 82px;
+}
+
+.header__logo {
+    display: block;
+    margin: 16px auto 9px;
+}
