@@ -14,7 +14,7 @@
     <section class="register-form">
       <div class="container register-form__inner">
         <div class="register-form__item">
-          <div class="owl-carousel  owl-theme">
+          <div class="register-form__carousel owl-carousel  owl-theme">
             <img src="img/content/slide 1.png" alt="" />
             <img src="img/content/slide 2.png" alt="" />
             <img src="img/content/slide 3.png" alt="" />
@@ -24,7 +24,6 @@
         <div class="register-form__item">
           <form class="form">
             <h1 class="form__title">Join us now. It's FREE</h1>
-
             <div class="form__row">
               <span class="form__label">I am</span>
               <span>
@@ -69,10 +68,10 @@
                 /><label for="looking-gender-man" class="hide">man</label>
               </span>
             </div>
-
             <div class="form__row">
               <label for="name" class="form__label">Name</label
-              ><input type="text" id="name" required/>
+              ><input type="text" id="name" name="name" required />
+              <div class="check"></div>
             </div>
 
             <div class="form__row">
@@ -142,7 +141,7 @@
               <span class="form__group">
                 <input type="checkbox" id="i'm-cool" class="form__check" />
                 <label for="i'm-cool">I'm cool</label>
-            
+
                 <input type="checkbox" id="life's-good" class="form__check" />
                 <label for="life's-good"> Life's good</label>
               </span>
@@ -154,7 +153,7 @@
                   class="form__check form__check--circle"
                 />
                 <label for="drink-tee"> Tee</label>
-          
+
                 <input
                   name="drink"
                   type="radio"
@@ -167,12 +166,223 @@
 
             <div class="form__row">
               <span class="form__label"></span>
-              <input type="submit" value="Start Now" class="form__button">
+              <input type="submit" value="Start Now" class="form__button" />
             </div>
           </form>
         </div>
+        <div class="register-form__shadow"></div>
       </div>
     </section>
+
+    <section class="">
+      <div class="container users">
+        <div class="users__info">
+          <h2 class="users__title">
+            Code this block
+          </h2>
+          <div class="users__img"></div>
+          <div class="users__text">
+            This text should be changeable. Lorem ipsum text here. Offers great
+            opportunities to everyone looking to meet locals, find romantic
+            dates and make new friends. Our dating site gives you hours of
+            dating fun, together with seemingly endless possibilities to meet
+            new single people from your area, make friends, go on a date and
+            enjoy good company. With thousands of local personals, will make
+            your life a whole lot busier with all that dating. This is a great
+            place to find true friends or devoted partners for long-term
+            relationships or marriage.
+          </div>
+        </div>
+        <div class="users__list">
+          <h2 class="users__title">
+            Users List
+          </h2>
+
+          <div class="users__carousel owl-carousel  owl-theme">
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="" />
+              <div class="users__item-btn">
+                <button></button>
+                <button></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="" />
+              <div class="users__item-btn">
+                <button></button>
+                <button></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="" />
+              <div class="users__item-btn">
+                <button></button>
+                <button></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="" />
+              <div class="users__item-btn">
+                <button></button>
+                <button></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="" />
+              <div class="users__item-btn">
+                <button></button>
+                <button></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="" />
+              <div class="users__item-btn">
+                <button></button>
+                <button></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="" />
+              <div class="users__item-btn">
+                <button></button>
+                <button></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="" />
+              <div class="users__item-btn">
+                <button></button>
+                <button></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="" />
+              <div class="users__item-btn">
+                <button></button>
+                <button></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="users__tabs">
+            <input
+              type="radio"
+              name="inset"
+              value=""
+              class="users__radio"
+              id="tab_1"
+            />
+            <label for="tab_1">Users List</label>
+
+            <input
+              type="radio"
+              name="inset"
+              value=""
+              class="users__radio"
+              id="tab_2"
+              checked
+            />
+            <label for="tab_2" class="margin-left">Active list tab | 38</label>
+
+            <div id="txt_1" class="users__tab">
+              <p>Произвольное содержимое...</p>
+              <p>Произвольное содержимое...</p>
+              <p>Произвольное содержимое...</p>
+            </div>
+            <div id="txt_2" class="users__tab">
+              <div class="flex">
+                <div class="flex__item1">
+                  <div class="progress">
+                    <progress max="100" value="70"> </progress>
+                    <p class="progress__value">70%</p>
+                  </div>
+                  <div class="steps">
+                    <div class="steps__item">Step 1</div>
+                    <div class="steps__item">Step 2</div>
+                    <div class="steps__item steps__item--active">Step 3</div>
+                    <div class="steps__item">Step 4</div>
+                    <div class="steps__item">Step 5</div>
+                  </div>
+                  <div id="MyRangeSlider"></div>
+                </div>
+                <div class="">
+                  <div class="progress-circle"></div>
+                  <div class="stars stars--active">
+                    <div class="stars__item "></div>
+                    <div class="stars__item"></div>
+                    <div class="stars__item stars__item--active"></div>
+                    <div class="stars__item"></div>
+                    <div class="stars__item "></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text">
+      <div class="container">
+        <h2 class="text__title">How to succeed in online dating</h2>
+        <div class="text__column">
+          <p>
+            There is no secret to being successful in online dating - you just
+            need to be yourself. Be active, comment on other members' profiles,
+            send them mails, chat with them and rate their profiles. We provide
+            a wide range of features allowing you to gather as many contacts as
+            you can handle. It is better to rotate photographs of yourself
+            regularly, update the details on your profile frequently, use the
+            instant communicator facility, and log onto the site as much as
+            possible, as well as at different times, to meet as many members as
+            you can. It is most important to be honest, positive and patient in
+            all your site activities.
+          </p>
+          <p class="text__color">
+            In the "My Account" area visit the section for photos entitled "My
+            Photos" and select the option "Click to upload photos". You will
+            then prompted to upload a photo from your computer. Your 'Primary'
+            photo is visible to everyone and should be a 'normal' photo. 'For
+            friends only' photos are visible only to those on your friends
+            list.Your 'Primary' photo is visible to everyone and should be a
+            'normal' photo. 'For friends only' photos are visible only to those
+            on your friends list.
+          </p>
+          <p>
+            You can also upload photos to your dating profile from your Facebook
+            account.
+          </p>
+          <ol class="text__list">
+            <li>Access your dating life even when you’re not browsing Cupid.com!</li>
+            <li>Search for new matches from your browser easily</li>
+            <li>Read and write
+              messages & chat with members live; receive Datecasts, winks and
+              alerts when your are online or have updated their profile info</li>
+            <li>Read and write messages & chat with members live; receive Datecasts,
+              winks and alerts when your friends</li>
+          </ol>
+          <blockquote class="text__quote">
+            In the "My Account" area visit the section for photos entitled "My
+            Photos" and select the option "Click to upload photos". You will
+            then be prompted to upload a photo from your computer. Your
+            'Primary' photo is visible to everyone and should be a 'normal'
+            photo. 'For friends only' photos are visible only to those on your
+            friends list.
+          </blockquote>
+          <a href="" class="text__link">Click here to view more</a>
+        </div>
+      </div>
+    </section>
+    <footer >
+      <div class="container footer">
+        <div class="footer__logo">
+          <img src="img/ico/logo gray.png" alt="">
+        </div>
+        <div class="footer__info">
+          <p>VD <span>Web Coder Test Task</span></p>
+          <p class="footer__date">2013</p>
+        </div>
+      </div>
+    </footer>
 
     <!-- <script src="scripts/jquery.min.js"></script>
     <script src="scripts/owl.carousel.min.js"></script> -->

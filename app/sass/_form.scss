@@ -50,9 +50,31 @@
   height: 34px;
 }
 
-// .form input[type="text"]:invalid {
+.form input[type="text"]:invalid {
+    border: 1px solid rgb(209, 0, 0);
+  }
+
+// .form input[type="text"]:invalid:not(:focus):not(:placeholder-shown) {
 //     border: 1px solid rgb(209, 0, 0);
 //   }
+
+
+.form input[type="text"]:invalid + .check {
+  position: absolute;
+  background-image: url("../img/ico/invalid.png");
+  width: 17px;
+  height: 17px;
+  right: 15px;
+}
+
+.form input[type="text"]:valid + .check {
+  position: absolute;
+  background-image: url("../img/ico/valid.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  right: 15px;
+}
 
 .form__check-gender {
   position: absolute;
@@ -288,6 +310,7 @@
   cursor: pointer;
   position: absolute;
   left: 0;
+  top: 12px;
   border-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.21);
@@ -311,7 +334,7 @@
   content: "";
   position: absolute;
   left: 2px;
-  top: 12px;
+  top: 14px;
   border-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.21);

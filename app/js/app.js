@@ -4,16 +4,38 @@ var App = {
   init: function() {
     this.owlCarousel();
     this.select();
+    this.progressCircle();
+    this.RangeSlider();
   },
 
   owlCarousel: function() {
-    $(".owl-carousel").owlCarousel({
+    $(".register-form__carousel").owlCarousel({
+      autoplayTimeout: 3000,
+      autoplay: true,
       loop: true,
       margin: 0,
       nav: false,
       responsive: {
         0: {
           items: 1
+        }
+      }
+    });
+
+    $(".users__carousel").owlCarousel({
+      autoplayTimeout: 4000,
+      // autoplay: true,
+      loop: true,
+      margin: 10,
+      nav: true,
+      navText: "",
+      dots: false,
+      responsive: {
+        900: {
+          items: 3
+        },
+        1200: {
+          items: 5
         }
       }
     });
@@ -74,9 +96,9 @@ var App = {
         title.html(months[month][1]);
       }
       if (leapYear === true) {
-        months.february = 29;
+        months.february[1] = 29;
       } else {
-        months.february = 28;
+        months.february[1] = 28;
       }
       $('[data-name="date"]')
         .find(".select__list")
@@ -129,6 +151,14 @@ var App = {
         ) {
           createDate(target, leapYear(year));
         }
+        if (
+          $(list)
+            .parent()
+            .attr("data-name") === "year" &&
+          $("[name='month']").val() === "february"
+        ) {
+          createDate("february", leapYear(year));
+        }
 
         let dateCheck = new Date(year, months[month][0], date);
         function getCurrentAge(date) {
@@ -168,6 +198,66 @@ var App = {
     createYears();
     createMonths();
     selectClick();
+  },
+
+  progressCircle: function() {
+    var dataset = [
+      {
+        value: 37,
+        color: "#ffa352"
+      },
+      {
+        value: 63,
+        color: "#e7e8e8"
+      }
+    ];
+    var maxValue = 25;
+    var container = $(".progress-circle");
+
+    var addSector = function(data, startAngle, collapse) {
+      var sectorDeg = 3.6 * data.value;
+      var skewDeg = 90 + sectorDeg;
+      var rotateDeg = startAngle;
+      if (collapse) {
+        skewDeg++;
+      }
+      var sector = $("<div>", {
+        class: "progress-circle__sector"
+      }).css({
+        background: data.color,
+        transform: "rotate(" + rotateDeg + "deg) skewY(" + skewDeg + "deg)"
+      });
+      container.append(sector);
+
+      return startAngle + sectorDeg;
+    };
+    dataset.reduce(function(prev, curr) {
+      return (function addPart(data, angle) {
+        if (data.value <= maxValue) {
+          return addSector(data, angle, false);
+        }
+        return addPart(
+          {
+            value: data.value - maxValue,
+            color: data.color
+          },
+          addSector(
+            {
+              value: maxValue,
+              color: data.color
+            },
+            angle,
+            true
+          )
+        );
+      })(curr, prev);
+    }, 0);
+  },
+
+  RangeSlider: function() {
+    var MyRangeSlider = new RangeSlider({
+      element: document.getElementById("MyRangeSlider")
+    });
   }
 };
 

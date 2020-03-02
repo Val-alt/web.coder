@@ -1,27 +1,49 @@
 * {
-    margin: 0;
-    outline: none;
+  margin: 0;
+  outline: none;
 }
 
 body {
-    font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .hide {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .container {
-    max-width: 960px;
-    margin: 0 auto;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .header {
-    width: 100%;
-    max-height: 82px;
+  width: 100%;
+  max-height: 82px;
 }
 
 .header__logo {
-    display: block;
-    margin: 16px auto 9px;
+  display: block;
+  margin: 16px auto 9px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgb(207, 207, 207);
+  padding: 20px 0;
+  align-items: center;
+}
+
+.footer__info {
+    font-size: 20px;
+    color: #cfcfcf;
+    text-align: right;
+}
+
+.footer__info span {
+    color: #4e4e4e;
+}
+
+.footer__date {
+    font-size: 31px;
 }

@@ -3,16 +3,33 @@
 var App = {
   options: {},
   init: function init() {
-    this.owlCarousel(), this.select();
+    this.owlCarousel(), this.select(), this.progressCircle(), this.RangeSlider();
   },
   owlCarousel: function owlCarousel() {
-    $(".owl-carousel").owlCarousel({
+    $(".register-form__carousel").owlCarousel({
+      autoplayTimeout: 3e3,
+      autoplay: !0,
       loop: !0,
       margin: 0,
       nav: !1,
       responsive: {
         0: {
           items: 1
+        }
+      }
+    }), $(".users__carousel").owlCarousel({
+      autoplayTimeout: 4e3,
+      loop: !0,
+      margin: 10,
+      nav: !0,
+      navText: "",
+      dots: !1,
+      responsive: {
+        900: {
+          items: 3
+        },
+        1200: {
+          items: 5
         }
       }
     });
@@ -34,10 +51,14 @@ var App = {
       december: [11, 31]
     };
 
-    function a(e, a) {
+    function a(e) {
+      return e % 400 == 0 || e % 4 == 0 && e % 100 != 0;
+    }
+
+    function l(e, a) {
       var l = $("[data-name='date'] .select__title"),
           n = $("[data-name='date'] .input_hidden").val();
-      l.html() > t[e][1] && l.html(t[e][1]), t.february = !0 === a ? 29 : 28, $('[data-name="date"]').find(".select__list").children().remove();
+      l.html() > t[e][1] && l.html(t[e][1]), t.february[1] = !0 === a ? 29 : 28, $('[data-name="date"]').find(".select__list").children().remove();
 
       for (var _a = 1; _a <= t[e][1]; _a++) {
         $('[data-name="date"]').find(".select__list").append("<li data-select='" + _a + "'>" + _a + "</li>");
@@ -46,7 +67,7 @@ var App = {
       "" != n ? $("[data-select='" + n + "']").addClass("active") : $("[data-select='1']").addClass("active");
     }
 
-    var l, n;
+    var n;
     !function () {
       var e = new Date();
 
@@ -60,30 +81,77 @@ var App = {
         $('[data-name="month"]').find(".select__list").append("<li data-select='" + _e + "'>" + _e + "</li>");
       }
 
-      $("[data-select='january']").addClass("active"), a("january");
-    }(), $(".select").click(function (l) {
-      var n = l.target.parentElement,
-          s = $(n).find(".select__list"),
-          i = $(n).find(".select__title");
+      $("[data-select='january']").addClass("active"), l("january");
+    }(), $(".select").click(function (n) {
+      var r = n.target.parentElement,
+          s = $(r).find(".select__list"),
+          i = $(r).find(".select__title");
       $(s).toggle(), $(i).toggleClass("select__title--open"), $(document).mouseup(function (e) {
-        $(n).is(e.target) || $(i).is(e.target) || ($(s).hide(), $(i).removeClass("select__title--open"));
-      }), $(".select__list li").click(function (l) {
-        var n = $("[data-name='year'] .select__title").html(),
+        $(r).is(e.target) || $(i).is(e.target) || ($(s).hide(), $(i).removeClass("select__title--open"));
+      }), $(".select__list li").click(function (n) {
+        var r = $("[data-name='year'] .select__title").html(),
             s = $("[data-name='date'] .select__title").html(),
             i = $("[data-name='month'] .select__title").html(),
-            d = l.target,
-            c = $(d).parent(),
-            r = $(c).parent().find(".input_hidden"),
-            o = $(c).parent().find(".select__title"),
-            m = d.dataset.select;
-        r.val(m), $(o).html(m).css("color", "#000").addClass("check"), 0 === e ? (e = 1, $(l.target).addClass("active")) : ($(c).children().removeClass("active"), $(l.target).addClass("active")), "month" === $(c).parent().attr("data-name") && a(m, (n = n) % 400 == 0 || n % 4 == 0 && n % 100 != 0);
-
-        var _ = new Date(n, t[i][0], s);
-
-        s = _, ((new Date().getTime() - new Date(s)) / 315576e5 | 0) >= 18 && console.log("+");
+            o = n.target,
+            c = $(o).parent(),
+            d = $(c).parent().find(".input_hidden"),
+            u = $(c).parent().find(".select__title"),
+            m = o.dataset.select;
+        d.val(m), $(u).html(m).css("color", "#000").addClass("check"), 0 === e ? (e = 1, $(n.target).addClass("active")) : ($(c).children().removeClass("active"), $(n.target).addClass("active")), "month" === $(c).parent().attr("data-name") && l(m, a(r)), "year" === $(c).parent().attr("data-name") && "february" === $("[name='month']").val() && l("february", a(r));
+        var p = new Date(r, t[i][0], s);
+        s = p, ((new Date().getTime() - new Date(s)) / 315576e5 | 0) >= 18 && console.log("+");
       });
     });
-  }
+  },
+  progressCircle: function progressCircle() {
+    var e = $(".progress-circle"),
+        t = function t(_t2, a, l) {
+      var n = 3.6 * _t2.value,
+          r = 90 + n,
+          s = a;
+      l && r++;
+      var i = $("<div>", {
+        "class": "progress-circle__sector"
+      }).css({
+        background: _t2.color,
+        transform: "rotate(" + s + "deg) skewY(" + r + "deg)"
+      });
+      return e.append(i), a + n;
+    };
+
+    [{
+      value: 37,
+      color: "#ffa352"
+    }, {
+      value: 63,
+      color: "#e7e8e8"
+    }].reduce(function (e, a) {
+      return function e(a, l) {
+        return a.value <= 25 ? t(a, l, !1) : e({
+          value: a.value - 25,
+          color: a.color
+        }, t({
+          value: 25,
+          color: a.color
+        }, l, !0));
+      }(a, e);
+    }, 0);
+  },
+  RangeSlider: function (_RangeSlider) {
+    function RangeSlider() {
+      return _RangeSlider.apply(this, arguments);
+    }
+
+    RangeSlider.toString = function () {
+      return _RangeSlider.toString();
+    };
+
+    return RangeSlider;
+  }(function () {
+    new RangeSlider({
+      element: document.getElementById("MyRangeSlider")
+    });
+  })
 };
 $(document).ready(function () {
   App.init();
