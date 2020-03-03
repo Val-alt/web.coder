@@ -1,5 +1,15 @@
 .form {
   padding: 16px 40px 30px 22px;
+  position: relative;
+
+  @media screen and (max-width: 920px) {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 10px;
+  }
 }
 
 .form__title {
@@ -9,16 +19,23 @@
   text-align: left;
 
   background: linear-gradient(0deg, #ff800c 10%, #fff 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #ff800c;
+
+  @media screen and (max-width: 980px) {
+    font-size: 24px;
+  }
 }
 
 .form__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //   margin-bottom: 11px;
+
+  @media screen and (max-width: 920px) {
+    justify-content: left;
+  }
 }
 
 .form__label {
@@ -27,11 +44,33 @@
   color: #666666;
   line-height: 2.76;
   display: inline-block;
+
+  @media screen and (max-width: 980px) {
+    font-size: 16px;
+  }
 }
 
 .form__label--right {
   padding: 0 15px;
   width: auto;
+}
+
+.mob {
+  display: none !important;
+
+  @media screen and (max-width: 500px) {
+    display: block !important;
+  }
+}
+
+.desctop {
+  @media screen and (max-width: 500px) {
+    display: none !important;
+  }
+}
+
+.form__label.mob {
+  flex: 0 0 35%;
 }
 
 .form input[type="text"] {
@@ -50,16 +89,11 @@
   height: 34px;
 }
 
-.form input[type="text"]:invalid {
-    border: 1px solid rgb(209, 0, 0);
-  }
+#name:invalid {
+  border: 1px solid rgb(209, 0, 0);
+}
 
-// .form input[type="text"]:invalid:not(:focus):not(:placeholder-shown) {
-//     border: 1px solid rgb(209, 0, 0);
-//   }
-
-
-.form input[type="text"]:invalid + .check {
+#name:invalid + .check {
   position: absolute;
   background-image: url("../img/ico/invalid.png");
   width: 17px;
@@ -67,7 +101,7 @@
   right: 15px;
 }
 
-.form input[type="text"]:valid + .check {
+#name:valid + .check {
   position: absolute;
   background-image: url("../img/ico/valid.png");
   background-repeat: no-repeat;
@@ -168,7 +202,6 @@
 .select {
   max-width: 330px;
   position: relative;
-  margin: 0 auto;
   color: #7e7c7c;
   font-size: 18px;
 }
@@ -176,6 +209,7 @@
 .input_hidden {
   visibility: hidden;
   position: absolute;
+  width: 10% !important;
 }
 
 .select[data-name="month"],
@@ -378,6 +412,10 @@
   padding: 16px 0;
   margin-top: 20px;
   transition: 0.3s;
+
+  @media screen and (max-width: 980px) {
+    font-size: 24px;
+  }
 }
 
 .form__button:hover {

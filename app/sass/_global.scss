@@ -14,6 +14,11 @@ body {
 .container {
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 40px;
+
+  @media screen and (max-width: 500px) {
+    padding: 0 15px;
+  }
 }
 
 .header {
@@ -32,18 +37,34 @@ body {
   border-top: 1px solid rgb(207, 207, 207);
   padding: 20px 0;
   align-items: center;
+
+  @media screen and (max-width: 1030px) {
+    padding: 20px 40px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 10px 20px;
+  }
 }
 
 .footer__info {
-    font-size: 20px;
-    color: #cfcfcf;
-    text-align: right;
+  font-size: 20px;
+  color: #cfcfcf;
+  text-align: right;
+
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
+  }
 }
 
 .footer__info span {
-    color: #4e4e4e;
+  color: #4e4e4e;
 }
 
 .footer__date {
-    font-size: 31px;
+  font-size: 31px;
+
+  @media screen and (max-width: 500px) {
+    font-size: 20px;
+  }
 }

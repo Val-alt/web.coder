@@ -1,8 +1,18 @@
+.text {
+  @media screen and (max-width: 1030px) {
+    padding-top: 30px;
+  }
+}
+
 .text__title {
   font-size: 31px;
   color: rgb(78, 78, 78);
   line-height: 1.2;
   font-weight: 300;
+
+  @media screen and (max-width: 500px) {
+    font-size: 20px;
+  }
 }
 
 .text__column {
@@ -27,8 +37,8 @@
 }
 
 .text__color {
-  color: #ffc28c;
-  border-left: 3px solid #ffc28c;
+  color: #f59948;
+  border-left: 3px solid #f59948;
   padding-left: 15px;
 }
 
@@ -85,7 +95,7 @@
 }
 
 .text__link {
-  color: #ffc28c;
+  color: #f59948;
   float: right;
   position: relative;
 }

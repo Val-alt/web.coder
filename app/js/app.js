@@ -31,10 +31,10 @@ var App = {
       navText: "",
       dots: false,
       responsive: {
-        900: {
+        400: {
           items: 3
         },
-        1200: {
+        700: {
           items: 5
         }
       }

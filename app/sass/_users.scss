@@ -1,16 +1,33 @@
 .users {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 26px;
 }
 
 .users__info {
   flex: 0 0 50%;
+
+  @media screen and (max-width: 1030px) {
+    flex: 0 0 100%;
+    margin: 0 auto;
+  }
 }
 
 .users__list {
   flex: 0 0 40%;
   max-width: 40%;
+
+  @media screen and (max-width: 1030px) {
+    flex: 0 0 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 0;
+  }
 }
 
 .users__title {
@@ -19,6 +36,17 @@
   line-height: 1.2;
   padding-bottom: 25px;
   font-weight: 300;
+
+  @media screen and (max-width: 500px) {
+    font-size: 20px;
+  }
+}
+
+.users__carousel {
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    margin: auto;
+  }
 }
 
 .users__img {
@@ -27,7 +55,7 @@
   width: 173px;
   height: 173px;
   overflow: hidden;
-  background-image: url("../img/content/slide 4.png");
+  background-image: url("../img/content/slide4.png");
   background-position: top center;
   background-size: 300px;
 
@@ -150,7 +178,7 @@
 .users__tab {
   height: 122px;
   display: none;
-  padding: 20px 15px 15px;
+  padding: 20px 10px 15px;
   border-radius: 5px;
   border-top-left-radius: 0px;
   border-style: solid;
@@ -165,6 +193,16 @@
   position: relative;
   z-index: 3;
   margin-left: 1px;
+
+  @media screen and (max-width: 1030px) {
+    width: 351px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 93%;
+    height: 245px;
+    text-align: center;
+  }
 }
 
 .users__tabs > label {
@@ -200,11 +238,23 @@
 .flex {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.flex__item {
+.flex__left {
   flex: 0 0 67%;
+
+  @media screen and (max-width: 500px) {
+    flex: 0 0 100%;
+  }
 }
+
+.flex__right {
+  @media screen and (max-width: 500px) {
+    flex: 0 0 100%;
+  }
+}
+
 
 .progress-circle {
   width: 90px;
@@ -213,6 +263,10 @@
   border-radius: 50%;
   position: relative;
   margin-bottom: 15px;
+
+  @media screen and (max-width: 500px) {
+    margin: 15px auto;
+  }
 }
 
 .progress-circle__sector {
