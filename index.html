@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Coder Test Task</title>
+    <link rel="stylesheet" href="styles/libs.min.css" />
+    <link rel="stylesheet" href="styles/web.coder.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="img/ico/logo.png" alt="logo" class="header__logo" />
+    </header>
+    <section class="register-form">
+      <div class="container register-form__inner">
+        <div class="register-form__item">
+          <div class="register-form__carousel owl-carousel  owl-theme">
+            <img src="img/content/slide1.png" alt="slide" />
+            <img src="img/content/slide2.png" alt="slide" />
+            <img src="img/content/slide3.png" alt="slide" />
+            <img src="img/content/slide4.png" alt="slide" />
+          </div>
+        </div>
+        <div class="register-form__item">
+          <form class="form">
+            <h1 class="form__title">Join us now. It's FREE</h1>
+            <div class="form__row">
+              <span class="form__label">I am</span>
+              <span>
+                <input
+                  type="radio"
+                  id="gender-woman"
+                  name="gender"
+                  class="form__check-gender form__check-gender--woman"
+                /><label for="gender-woman" class="hide">woman</label
+                ><input
+                  type="radio"
+                  id="gender-man"
+                  name="gender"
+                  class="form__check-gender form__check-gender--man"
+                /><label for="gender-man" class="hide">man</label>
+                <span class="form__label form__label--right desctop">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="16px"
+                    height="15px"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      fill="rgb(137, 138, 138)"
+                      d="M0.271,13.227 C0.077,13.421 0.077,13.737 0.271,13.931 L0.975,14.635 C1.170,14.830 1.485,14.830 1.680,14.635 L5.191,11.311 C5.245,11.257 5.280,11.193 5.304,11.126 C6.315,11.865 7.558,12.306 8.906,12.306 C12.285,12.306 15.025,9.567 15.025,6.187 C15.025,2.808 12.285,0.068 8.906,0.068 C5.527,0.068 2.787,2.808 2.787,6.187 C2.787,7.535 3.228,8.778 3.967,9.789 C3.900,9.813 3.836,9.849 3.783,9.902 L0.271,13.227 ZM8.906,2.108 C11.159,2.108 12.985,3.934 12.985,6.187 C12.985,8.440 11.159,10.267 8.906,10.267 C6.653,10.267 4.826,8.440 4.826,6.187 C4.826,3.934 6.653,2.108 8.906,2.108 Z"
+                    />
+                  </svg>
+                  looking for
+                </span>
+                <input
+                  type="radio"
+                  id="looking-gender-woman"
+                  name="looking-gender"
+                  class="form__check-gender form__check-gender--woman desctop"
+                /><label for="looking-gender-woman" class="hide desctop"
+                  >woman</label
+                ><input
+                  type="radio"
+                  id="looking-gender-man"
+                  name="looking-gender"
+                  class="form__check-gender form__check-gender--man desctop"
+                /><label for="looking-gender-man" class="hide desctop"
+                  >man</label
+                >
+              </span>
+            </div>
+            <div class="form__row">
+              <span class="form__label mob">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="16px"
+                  height="15px"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    fill="rgb(137, 138, 138)"
+                    d="M0.271,13.227 C0.077,13.421 0.077,13.737 0.271,13.931 L0.975,14.635 C1.170,14.830 1.485,14.830 1.680,14.635 L5.191,11.311 C5.245,11.257 5.280,11.193 5.304,11.126 C6.315,11.865 7.558,12.306 8.906,12.306 C12.285,12.306 15.025,9.567 15.025,6.187 C15.025,2.808 12.285,0.068 8.906,0.068 C5.527,0.068 2.787,2.808 2.787,6.187 C2.787,7.535 3.228,8.778 3.967,9.789 C3.900,9.813 3.836,9.849 3.783,9.902 L0.271,13.227 ZM8.906,2.108 C11.159,2.108 12.985,3.934 12.985,6.187 C12.985,8.440 11.159,10.267 8.906,10.267 C6.653,10.267 4.826,8.440 4.826,6.187 C4.826,3.934 6.653,2.108 8.906,2.108 Z"
+                  />
+                </svg>
+                looking for
+              </span>
+              <input
+                type="radio"
+                id="looking-gender-woman-mob"
+                name="looking-gender"
+                class="form__check-gender form__check-gender--woman mob"
+              /><label for="looking-gender-woman-mob" class="hide mob">woman</label
+              ><input
+                type="radio"
+                id="looking-gender-man-mob"
+                name="looking-gender"
+                class="form__check-gender form__check-gender--man mob"
+              /><label for="looking-gender-man-mob" class="hide mob">man</label>
+            </div>
+            <div class="form__row">
+              <label for="name" class="form__label">Name</label
+              ><input type="text" id="name" name="name" required />
+              <div class="check"></div>
+            </div>
+
+            <div class="form__row">
+              <span class="form__label">Age</span>
+              <div class="select" data-name="date">
+                <input type="text" name="date" class="input_hidden" />
+                <div class="select__title" tabindex="0">1</div>
+                <ul class="select__list"></ul>
+              </div>
+              <div class="select" data-name="month">
+                <input type="text" name="month" class="input_hidden" />
+                <div class="select__title" tabindex="0">january</div>
+                <ul class="select__list"></ul>
+              </div>
+              <div class="select" data-name="year">
+                <input type="text" name="years" class="input_hidden" />
+                <div class="select__title" tabindex="0">1999</div>
+                <ul class="select__list"></ul>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <p class="form__label">City</p>
+              <div class="select" data-name="city">
+                <input type="text" name="city" class="input_hidden" />
+                <div class="select__title" tabindex="0">Сhoose a city</div>
+                <ul class="select__list">
+                  <li data-select="Brighton">
+                    Brighton
+                  </li>
+                  <li data-select="Windsor">
+                    Windsor
+                  </li>
+                  <li data-select="Gloucester">
+                    Gloucester
+                  </li>
+                  <li data-select="York">
+                    York
+                  </li>
+                  <li data-select="Colchester">
+                    Colchester
+                  </li>
+                  <li data-select="London">
+                    London
+                  </li>
+                  <li data-select="Manchester">
+                    Manchester
+                  </li>
+                  <li data-select="Oxford">
+                    Oxford
+                  </li>
+                  <li data-select="Preston">
+                    Preston
+                  </li>
+                  <li data-select="Southampton">
+                    Southampton
+                  </li>
+                  <li data-select="Salisbury">
+                    Salisbury
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <span class="form__label"></span>
+              <span class="form__group">
+                <input type="checkbox" id="i'm-cool" class="form__check" />
+                <label for="i'm-cool">I'm cool</label>
+
+                <input type="checkbox" id="life's-good" class="form__check" />
+                <label for="life's-good"> Life's good</label>
+              </span>
+              <span class="form__group">
+                <input
+                  name="drink"
+                  type="radio"
+                  id="drink-tee"
+                  class="form__check form__check--circle"
+                />
+                <label for="drink-tee"> Tee</label>
+
+                <input
+                  name="drink"
+                  type="radio"
+                  id="drink-beer"
+                  class="form__check form__check--circle"
+                />
+                <label for="drink-beer"> Beer</label>
+              </span>
+            </div>
+
+            <div class="form__row">
+              <span class="form__label"></span>
+              <input type="submit" value="Start Now" class="form__button" />
+            </div>
+          </form>
+        </div>
+        <div class="register-form__shadow"></div>
+      </div>
+    </section>
+
+    <section class="">
+      <div class="container users">
+        <div class="users__info">
+          <h2 class="users__title">
+            Code this block
+          </h2>
+          <div class="users__img"></div>
+          <div class="users__text">
+            This text should be changeable. Lorem ipsum text here. Offers great
+            opportunities to everyone looking to meet locals, find romantic
+            dates and make new friends. Our dating site gives you hours of
+            dating fun, together with seemingly endless possibilities to meet
+            new single people from your area, make friends, go on a date and
+            enjoy good company. With thousands of local personals, will make
+            your life a whole lot busier with all that dating. This is a great
+            place to find true friends or devoted partners for long-term
+            relationships or marriage.
+          </div>
+        </div>
+        <div class="users__list">
+          <h2 class="users__title">
+            Users List
+          </h2>
+
+          <div class="users__carousel owl-carousel  owl-theme">
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="Layer" />
+              <div class="users__item-btn">
+                <button name="like"></button>
+                <button name="add"></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="Layer" />
+              <div class="users__item-btn">
+                <button name="like"></button>
+                <button name="add"></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="Layer" />
+              <div class="users__item-btn">
+                <button name="like"></button>
+                <button name="add"></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="Layer" />
+              <div class="users__item-btn">
+                <button name="like"></button>
+                <button name="add"></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="Layer" />
+              <div class="users__item-btn">
+                <button name="like"></button>
+                <button name="add"></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="Layer" />
+              <div class="users__item-btn">
+                <button name="like"></button>
+                <button name="add"></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="Layer" />
+              <div class="users__item-btn">
+                <button name="like"></button>
+                <button name="add"></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="Layer" />
+              <div class="users__item-btn">
+                <button name="like"></button>
+                <button name="add"></button>
+              </div>
+            </div>
+            <div class="users__item">
+              <img src="img/content/Layer.png" alt="Layer" />
+              <div class="users__item-btn">
+                <button name="like"></button>
+                <button name="add"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="users__tabs">
+            <input
+              type="radio"
+              name="inset"
+              value=""
+              class="users__radio"
+              id="tab_1"
+            />
+            <label for="tab_1">Users List</label>
+
+            <input
+              type="radio"
+              name="inset"
+              value=""
+              class="users__radio"
+              id="tab_2"
+              checked
+            />
+            <label for="tab_2" class="margin-left">Active list tab | 38</label>
+
+            <div id="txt_1" class="users__tab">
+              <p>Произвольное содержимое...</p>
+              <p>Произвольное содержимое...</p>
+              <p>Произвольное содержимое...</p>
+            </div>
+            <div id="txt_2" class="users__tab">
+              <div class="flex">
+                <div class="flex__left">
+                  <div class="progress">
+                    <progress max="100" value="70"> </progress>
+                    <p class="progress__value">70%</p>
+                  </div>
+                  <div class="steps">
+                    <div class="steps__item">Step 1</div>
+                    <div class="steps__item">Step 2</div>
+                    <div class="steps__item steps__item--active">Step 3</div>
+                    <div class="steps__item">Step 4</div>
+                    <div class="steps__item">Step 5</div>
+                  </div>
+                  <div id="MyRangeSlider"></div>
+                </div>
+                <div class="flex__right">
+                  <div class="progress-circle"></div>
+                  <div class="stars stars--active">
+                    <div class="stars__item "></div>
+                    <div class="stars__item"></div>
+                    <div class="stars__item stars__item--active"></div>
+                    <div class="stars__item"></div>
+                    <div class="stars__item "></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text">
+      <div class="container">
+        <h2 class="text__title">How to succeed in online dating</h2>
+        <div class="text__column">
+          <p>
+            There is no secret to being successful in online dating - you just
+            need to be yourself. Be active, comment on other members' profiles,
+            send them mails, chat with them and rate their profiles. We provide
+            a wide range of features allowing you to gather as many contacts as
+            you can handle. It is better to rotate photographs of yourself
+            regularly, update the details on your profile frequently, use the
+            instant communicator facility, and log onto the site as much as
+            possible, as well as at different times, to meet as many members as
+            you can. It is most important to be honest, positive and patient in
+            all your site activities.
+          </p>
+          <p class="text__color">
+            In the "My Account" area visit the section for photos entitled "My
+            Photos" and select the option "Click to upload photos". You will
+            then prompted to upload a photo from your computer. Your 'Primary'
+            photo is visible to everyone and should be a 'normal' photo. 'For
+            friends only' photos are visible only to those on your friends
+            list.Your 'Primary' photo is visible to everyone and should be a
+            'normal' photo. 'For friends only' photos are visible only to those
+            on your friends list.
+          </p>
+          <p>
+            You can also upload photos to your dating profile from your Facebook
+            account.
+          </p>
+          <ol class="text__list">
+            <li>
+              Access your dating life even when you’re not browsing Cupid.com!
+            </li>
+            <li>Search for new matches from your browser easily</li>
+            <li>
+              Read and write messages & chat with members live; receive
+              Datecasts, winks and alerts when your are online or have updated
+              their profile info
+            </li>
+            <li>
+              Read and write messages & chat with members live; receive
+              Datecasts, winks and alerts when your friends
+            </li>
+          </ol>
+          <blockquote class="text__quote">
+            In the "My Account" area visit the section for photos entitled "My
+            Photos" and select the option "Click to upload photos". You will
+            then be prompted to upload a photo from your computer. Your
+            'Primary' photo is visible to everyone and should be a 'normal'
+            photo. 'For friends only' photos are visible only to those on your
+            friends list.
+          </blockquote>
+          <a href="" class="text__link">Click here to view more</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container footer">
+        <div class="footer__logo">
+          <img src="img/ico/logo-gray.png" alt="logo" />
+        </div>
+        <div class="footer__info">
+          <p>VD <span>Web Coder Test Task</span></p>
+          <p class="footer__date">2013</p>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/libs.min.js"></script>
+    <script src="scripts/web.coder.min.js"></script>
+  </body>
+</html>
